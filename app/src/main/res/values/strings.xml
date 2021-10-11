@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Assignment1</string>
+    <string name="find_country">Submit</string>
+    <string name="names">Genie Park A01196275</string>
+    <string-array name="github">
+        <item>freeCodeCamp</item>
+        <item>996.ICU</item>
+        <item>Vue</item>
+        <item>Free Progamming Books</item>
+        <item>React</item>
+    </string-array>
+
+</resources>

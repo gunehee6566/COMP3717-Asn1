@@ -9,15 +9,23 @@
 
 
     <TextView
-        android:id="@+id/names"
+        android:id="@+id/name1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="16dp"
-        android:text="@string/names" />
+        android:text="@string/nameGenie" />
+
+    <TextView
+        android:id="@+id/name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="@string/nameJason" />
 
     <Spinner
-        android:id="@+id/continent"
+        android:id="@+id/repo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -26,12 +34,12 @@
         android:entries="@array/github" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center"
-        android:onClick="onClickFindCountry"
-        android:text="@string/find_country" />
+        android:onClick="onClickFindContributor"
+        android:text="@string/find_repo" />
 
 </LinearLayout>

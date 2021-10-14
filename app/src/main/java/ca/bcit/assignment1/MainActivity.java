@@ -8,15 +8,8 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.gson.Gson;
-
-import org.json.JSONArray;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
 
         repoCompanies = new HashMap<String, String>();
 
-        // Add keys and values (Country, City)
-        repoCompanies.put("freeCodeCamp", "freeCodeCamp");
-        repoCompanies.put("996.ICU", "996icu");
-        repoCompanies.put("Vue", "vuejs");
-        repoCompanies.put("Free Progamming Books", "EbookFoundation");
-        repoCompanies.put("React", "facebook");
+        // Add keys and values (repo, company)
+        repoCompanies.put(getString(R.string.repo_freeCodeCamp), getString(R.string._freecodecamp));
+        repoCompanies.put(getString(R.string.repo_996_ICU), getString(R.string._996_icu));
+        repoCompanies.put(getString(R.string.repo_Vue), getString(R.string._vue));
+        repoCompanies.put(getString(R.string.repo_Free_Programming_Books), getString(R.string._free_programming_books));
+        repoCompanies.put(getString(R.string.repo_React), getString(R.string._react));
 
         repos = findViewById(R.id.repo);
         selectBtn = findViewById(R.id.btnSubmit);

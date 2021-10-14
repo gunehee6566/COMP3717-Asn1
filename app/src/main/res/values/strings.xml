@@ -1,22 +1,29 @@
 <resources>
-    <string name="app_name">Assignment1</string>
-    <string name="header">GJ-Assignment1</string>
+    <string name="app_name">Park_Genie Pan_Yixuan</string>
+    <string name="header">Park_Genie Pan_Yixuan</string>
 
     <string name="find_repo">Submit</string>
     <string name="nameGenie">Genie Park A01196275</string>
-    <string name="nameJason">Jason Pan A01085232</string>
+    <string name="nameJason">Yixuan Pan A01085232</string>
     <string-array name="github">
         <item>freeCodeCamp</item>
         <item>996.ICU</item>
         <item>Vue</item>
-        <item>Free Progamming Books</item>
+        <item>free-programming-books</item>
         <item>React</item>
     </string-array>
 
+    <string name="repo_freeCodeCamp">freeCodeCamp</string>
+    <string name="repo_996_ICU">996.ICU</string>
+    <string name="repo_Vue">Vue</string>
+    <string name="repo_Free_Programming_Books">free-programming-books</string>
+    <string name="repo_React">React</string>
+
+
     <string name="_freecodecamp">freeCodeCamp</string>
-    <string name="_996.icu">996icu</string>
+    <string name="_996_icu">996icu</string>
     <string name="_vue">vuejs</string>
-    <string name="_free_progamming_books">EbookFoundation</string>
+    <string name="_free_programming_books">EbookFoundation</string>
     <string name="_react">facebook</string>
 
 </resources>

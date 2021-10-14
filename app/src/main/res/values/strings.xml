@@ -11,4 +11,10 @@
         <item>React</item>
     </string-array>
 
+    <string name="_freecodecamp">freeCodeCamp</string>
+    <string name="_996.icu">996icu</string>
+    <string name="_vue">vuejs</string>
+    <string name="_free_progamming_books">EbookFoundation</string>
+    <string name="_react">facebook</string>
+
 </resources>

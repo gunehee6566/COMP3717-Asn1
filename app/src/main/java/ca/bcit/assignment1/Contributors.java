@@ -18,4 +18,5 @@ public class Contributors implements Serializable {
     public void setContributors(ArrayList<Developer> contributors) {
         this.contributors = contributors;
     }
+
 }

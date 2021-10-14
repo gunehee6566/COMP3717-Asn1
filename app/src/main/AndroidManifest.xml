@@ -11,10 +11,13 @@
         android:theme="@style/Theme.Assignment1">
         <activity
             android:name=".DetailActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/header">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

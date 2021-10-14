@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Assignment1</string>
+    <string name="header">GJ-Assignment1</string>
+
     <string name="find_repo">Submit</string>
     <string name="nameGenie">Genie Park A01196275</string>
     <string name="nameJason">Jason Pan A01085232</string>

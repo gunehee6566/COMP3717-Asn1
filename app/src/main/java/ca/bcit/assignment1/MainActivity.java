@@ -3,6 +3,7 @@ package ca.bcit.assignment1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Developer> _contriList;
     private RequestQueue _requestQueue;
     private HashMap<String, String> repoCompanies;
+    private Button selectBtn;
+    private Spinner repos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,47 +46,24 @@ public class MainActivity extends AppCompatActivity {
         repoCompanies.put("Free Progamming Books", "EbookFoundation");
         repoCompanies.put("React", "facebook");
 
-    }
-
-    public void onClickFindContributor(View v) {
-        Spinner repos = findViewById(R.id.repo);
-        String currRepo = repos.getSelectedItem().toString();
-
-        // Build endpoint here
-        String currRepoCompany = repoCompanies.get(currRepo);
-
-        String endPoint = "https://api.github.com/repos/"+ currRepoCompany + "/" +currRepo + "/contributors";
-
+        repos = findViewById(R.id.repo);
+        selectBtn = findViewById(R.id.btnSubmit);
         Intent i = new Intent(this, DetailActivity.class);
 
-        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, endPoint, null,
-                new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        String jsonStr = "{\"contributors\":" + response.toString() + "}";
-                        Gson gson = new Gson();
+        selectBtn.setOnClickListener(new View.OnClickListener(){
 
-                        Contributors contributors = gson.fromJson(jsonStr, Contributors.class);
-                        _contriList = contributors.getContributors();
-
-                        //Add the bundle to the intent
-                        i.putExtra("contributorList", _contriList);
-
-                        //Fire that second activity
-                        startActivity(i);
-                    }
-
-
-                },new Response.ErrorListener() {
             @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
+            public void onClick(View view) {
+                String currRepo = repos.getSelectedItem().toString();
+                String currRepoCompany = repoCompanies.get(currRepo);
+
+                String endPoint = "https://api.github.com/repos/"+ currRepoCompany + "/" +currRepo + "/contributors";
+                i.putExtra("URL",endPoint);
+                startActivity(i);
+
             }
-        }
-        );
-
-        _requestQueue.add(request);
-
+        });
     }
+
 
 }
